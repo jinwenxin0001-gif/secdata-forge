@@ -1,33 +1,31 @@
 # Architecture
 
-CyberData Clean is designed around the lifecycle described in the funding proposal:
+SecData Forge is organized as a plain, file-based pipeline. The goal is to make every dataset release easy to inspect and easy to reproduce.
 
 ```mermaid
 flowchart LR
-  A["Open cybersecurity data"] --> B["Source registry and field mapping"]
-  B --> C["Cleaning and duplicate checks"]
-  C --> D["Label normalization and quality scoring"]
-  D --> E["High-quality dataset view"]
-  E --> F["Downstream baseline validation"]
-  E --> G["Drift detection"]
-  F --> H["Update recommendation"]
-  G --> H
-  H --> B
+  A["Source table"] --> B["Standardize fields"]
+  B --> C["Clean records"]
+  C --> D["Score records"]
+  D --> E["Write release artifacts"]
+  E --> F["Run baseline validation"]
+  E --> G["Compare with reference data"]
 ```
 
 ## Modules
 
-- `standardize.py`: maps heterogeneous source fields and labels into a canonical schema.
+- `standardize.py`: maps source fields and labels into a canonical schema.
 - `cleaning.py`: checks missing required fields, invalid timestamps, exact duplicates, and near duplicates.
 - `quality.py`: scores provenance, completeness, label confidence, uniqueness, freshness, and feature usability.
 - `drift.py`: compares reference and current data with PSI, KS statistic, and JS divergence.
-- `validation.py`: runs a lightweight nearest-centroid downstream baseline without external dependencies.
-- `pipeline.py`: ties the full process together and writes reproducible artifacts.
+- `validation.py`: runs a lightweight nearest-centroid baseline without external dependencies.
+- `report.py`: writes Markdown and JSON summaries for release review.
+- `pipeline.py`: ties the full process together.
 
-## Design Choices
+## Design Notes
 
-- Standard-library only by default, so the demo can run in constrained environments.
-- Config-driven field and label mappings, because cybersecurity datasets are heterogeneous.
-- Sample-level and dataset-level reports, because reviewers need to see both engineering detail and research metrics.
-- Data cards and issue manifests, because traceability is part of dataset quality.
+- The default path uses only the Python standard library.
+- Field and label rules live in JSON configuration files.
+- Output files are stable enough to be committed, reviewed, and diffed.
+- Raw sensitive artifacts should stay outside the repository; derived features and metadata are preferred.
 
