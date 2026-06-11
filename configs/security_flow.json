@@ -1,0 +1,74 @@
+{
+  "dataset": {
+    "name": "OpenSec-Flow-Demo",
+    "task": "intrusion-detection",
+    "source": "synthetic-open-security-flow",
+    "source_trust": 0.86,
+    "license": "CC0-1.0 demo data"
+  },
+  "field_mapping": {
+    "Flow ID": "sample_id",
+    "Timestamp": "timestamp",
+    "Src IP": "src_ip",
+    "Src Port": "src_port",
+    "Dst IP": "dst_ip",
+    "Dst Port": "dst_port",
+    "Protocol": "protocol",
+    "Duration": "duration",
+    "Src Bytes": "src_bytes",
+    "Dst Bytes": "dst_bytes",
+    "Packets": "packets",
+    "Label": "label",
+    "Attack": "attack_type",
+    "Message": "text"
+  },
+  "label_mapping": {
+    "BENIGN": "benign",
+    "Normal": "benign",
+    "Bot": "botnet",
+    "Botnet": "botnet",
+    "DDoS": "ddos",
+    "DoS": "dos",
+    "PortScan": "scan",
+    "Scan": "scan",
+    "Web Attack": "web_attack",
+    "Brute Force": "bruteforce",
+    "Ransomware": "ransomware"
+  },
+  "required_fields": [
+    "timestamp",
+    "src_ip",
+    "dst_ip",
+    "protocol",
+    "label"
+  ],
+  "identity_fields": [
+    "timestamp",
+    "src_ip",
+    "src_port",
+    "dst_ip",
+    "dst_port",
+    "protocol",
+    "label",
+    "attack_type"
+  ],
+  "numeric_features": [
+    "src_port",
+    "dst_port",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "packets"
+  ],
+  "categorical_features": [
+    "protocol",
+    "label",
+    "attack_type"
+  ],
+  "text_fields": [
+    "text"
+  ],
+  "quality_threshold": 0.78,
+  "near_duplicate_threshold": 0.9
+}
+

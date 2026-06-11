@@ -1,0 +1,46 @@
+{
+  "status": "ok",
+  "model": "nearest-centroid-baseline",
+  "features": [
+    "src_port",
+    "dst_port",
+    "duration",
+    "src_bytes",
+    "dst_bytes",
+    "packets"
+  ],
+  "train_records": 9,
+  "test_records": 5,
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0
+  },
+  "confusion_matrix": {
+    "benign": {
+      "benign": 2,
+      "botnet": 0,
+      "scan": 0,
+      "web_attack": 0
+    },
+    "botnet": {
+      "benign": 0,
+      "botnet": 1,
+      "scan": 0,
+      "web_attack": 0
+    },
+    "scan": {
+      "benign": 0,
+      "botnet": 0,
+      "scan": 1,
+      "web_attack": 0
+    },
+    "web_attack": {
+      "benign": 0,
+      "botnet": 0,
+      "scan": 0,
+      "web_attack": 1
+    }
+  }
+}

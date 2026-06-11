@@ -1,0 +1,3 @@
+sample_id,issue,severity,detail
+f006,exact_duplicate,medium,f005
+f009,missing_required,high,label

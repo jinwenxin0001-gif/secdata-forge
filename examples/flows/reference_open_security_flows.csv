@@ -1,0 +1,12 @@
+Flow ID,Timestamp,Src IP,Src Port,Dst IP,Dst Port,Protocol,Duration,Src Bytes,Dst Bytes,Packets,Label,Attack,Message
+r001,2025-11-01 09:00:01,10.0.0.5,51544,172.16.1.10,443,TCP,1.1,900,8040,17,BENIGN,benign,normal tls web session
+r002,2025-11-01 09:01:12,10.0.0.6,53321,172.16.1.10,443,TCP,1.0,920,7901,17,BENIGN,benign,normal tls api session
+r003,2025-11-01 09:02:34,10.0.0.7,53411,172.16.1.11,53,UDP,0.2,120,340,4,BENIGN,benign,dns request
+r004,2025-11-01 09:03:15,10.0.0.8,53500,172.16.1.12,443,TCP,1.4,1080,9000,21,BENIGN,benign,normal payment service call
+r005,2025-11-01 09:04:09,10.0.0.9,53501,172.16.1.12,443,TCP,1.3,1020,8800,20,BENIGN,benign,normal checkout service call
+r006,2025-11-01 09:05:42,203.0.113.8,42110,172.16.1.21,80,TCP,5.1,31000,1200,120,DDoS,volumetric,http flood attempt
+r007,2025-11-01 09:06:30,198.51.100.4,38880,172.16.1.22,22,TCP,3.2,3300,500,34,Brute Force,ssh,failed ssh login burst
+r008,2025-11-01 09:07:43,192.0.2.77,49152,172.16.1.30,445,TCP,2.3,2500,650,25,PortScan,recon,smb port scan pattern
+r009,2025-11-01 09:08:01,203.0.113.99,40200,172.16.1.40,8080,TCP,4.1,5000,1300,50,Web Attack,injection,suspicious sql injection payload
+r010,2025-11-01 09:09:11,198.51.100.55,44700,172.16.1.50,25,TCP,4.6,3800,300,50,Bot,botnet,smtp bot command pattern
+

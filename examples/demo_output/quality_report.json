@@ -1,0 +1,30 @@
+{
+  "dataset": "OpenSec-Flow-Demo",
+  "records_after_cleaning": 15,
+  "high_quality_records": 14,
+  "high_quality_rate": 0.9333,
+  "overall_quality_score": 0.9583,
+  "median_age_days": 41,
+  "label_distribution": {
+    "benign": 4,
+    "ddos": 2,
+    "bruteforce": 1,
+    "scan": 2,
+    "missing": 1,
+    "web_attack": 2,
+    "botnet": 2,
+    "ransomware": 1
+  },
+  "source_distribution": {
+    "synthetic-open-security-flow": 15
+  },
+  "balance_score": 0.9467,
+  "issue_counts": {
+    "exact_duplicate": 1,
+    "missing_required": 1
+  },
+  "recommendations": [
+    "存在关键字段缺失样本，建议完善来源登记和字段映射规则。",
+    "检测到重复或近重复样本，建议在版本发布前保留去重清单。"
+  ]
+}

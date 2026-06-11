@@ -1,0 +1,106 @@
+{
+  "numeric_drift": [
+    {
+      "feature": "src_port",
+      "psi": 0.1561,
+      "ks": 0.1667,
+      "severity": "medium"
+    },
+    {
+      "feature": "dst_port",
+      "psi": 0.7619,
+      "ks": 0.1333,
+      "severity": "high"
+    },
+    {
+      "feature": "duration",
+      "psi": 3.7949,
+      "ks": 0.4,
+      "severity": "high"
+    },
+    {
+      "feature": "src_bytes",
+      "psi": 1.803,
+      "ks": 0.4667,
+      "severity": "high"
+    },
+    {
+      "feature": "dst_bytes",
+      "psi": 0.0835,
+      "ks": 0.1333,
+      "severity": "low"
+    },
+    {
+      "feature": "packets",
+      "psi": 3.4169,
+      "ks": 0.3667,
+      "severity": "high"
+    }
+  ],
+  "categorical_drift": [
+    {
+      "feature": "protocol",
+      "js_divergence": 0.0018,
+      "severity": "low",
+      "reference_distribution": {
+        "TCP": 0.9,
+        "UDP": 0.1
+      },
+      "current_distribution": {
+        "TCP": 0.933333,
+        "UDP": 0.066667
+      }
+    },
+    {
+      "feature": "label",
+      "js_divergence": 0.0707,
+      "severity": "medium",
+      "reference_distribution": {
+        "benign": 0.5,
+        "ddos": 0.1,
+        "bruteforce": 0.1,
+        "scan": 0.1,
+        "web_attack": 0.1,
+        "botnet": 0.1
+      },
+      "current_distribution": {
+        "benign": 0.266667,
+        "ddos": 0.133333,
+        "bruteforce": 0.066667,
+        "scan": 0.133333,
+        "missing": 0.066667,
+        "web_attack": 0.133333,
+        "botnet": 0.133333,
+        "ransomware": 0.066667
+      }
+    },
+    {
+      "feature": "attack_type",
+      "js_divergence": 0.038,
+      "severity": "low",
+      "reference_distribution": {
+        "benign": 0.5,
+        "volumetric": 0.1,
+        "ssh": 0.1,
+        "recon": 0.1,
+        "injection": 0.1,
+        "botnet": 0.1
+      },
+      "current_distribution": {
+        "benign": 0.333333,
+        "volumetric": 0.133333,
+        "ssh": 0.066667,
+        "recon": 0.133333,
+        "injection": 0.133333,
+        "botnet": 0.133333,
+        "lateral_movement": 0.066667
+      }
+    }
+  ],
+  "summary": {
+    "features_checked": 9,
+    "high_drift_features": 4,
+    "medium_drift_features": 2,
+    "overall_status": "update_required"
+  }
+}
