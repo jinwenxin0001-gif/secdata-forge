@@ -4,7 +4,7 @@ message: "If you use SecData Forge in research or engineering work, please cite 
 type: software
 authors:
   - name: jinwenxin0001-gif
-repository-code: "https://github.com/jinwenxin0001-gif/secdata-forge"
+repository-code: "https://github.com/jinwenxin0001-gif/data_clean"
 license: MIT
 version: 0.1.0
 date-released: 2026-06-11
