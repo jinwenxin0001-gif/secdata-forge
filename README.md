@@ -69,6 +69,7 @@ secdata-forge validate --input examples/flows/raw_open_security_flows.csv --conf
 | `drift_report.md/json` | Reference-vs-current distribution comparison. |
 | `validation_report.json` | Lightweight downstream baseline results. |
 | `DATA_CARD.md` | Release notes for a dataset version. |
+| `manifest.json` | Checksums and sizes for generated artifacts. |
 
 ## Repository Layout
 
@@ -118,4 +119,3 @@ SecData Forge is not a replacement for full observability or model-monitoring sy
 ## Safety Notes
 
 This repository is meant for metadata, derived features, labels, hashes, and redacted logs. Do not commit raw malware, private packet payloads, credentials, personal data, or exploit code.
-

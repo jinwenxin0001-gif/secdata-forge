@@ -1,6 +1,6 @@
 # Security Policy
 
-CyberData Clean is built for metadata, derived features, labels, hashes, and reproducible processing scripts.
+SecData Forge is built for metadata, derived features, labels, hashes, and reproducible processing scripts.
 
 Do not publish raw malicious binaries, private traffic payloads, credentials, personal data, or exploit code in this repository. When working with sensitive cybersecurity data, prefer:
 
@@ -11,4 +11,3 @@ Do not publish raw malicious binaries, private traffic payloads, credentials, pe
 - reproducible processing scripts.
 
 If you find a security issue in this project, open a private report through GitHub security advisories or contact the repository owner.
-

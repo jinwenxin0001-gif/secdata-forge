@@ -153,15 +153,15 @@ def recommendations(
 ) -> list[str]:
     advice: list[str] = []
     if labels and entropy_score(labels) < 0.65:
-        advice.append("类别分布偏斜，建议构建分层评估集并为少数攻击类型补充样本或设置类别权重。")
+        advice.append("Label distribution is skewed; consider a stratified evaluation set or class weights.")
     if issue_counts.get("missing_required", 0):
-        advice.append("存在关键字段缺失样本，建议完善来源登记和字段映射规则。")
+        advice.append("Some required fields are missing; review source registration and field mapping rules.")
     if issue_counts.get("exact_duplicate", 0) or issue_counts.get("near_duplicate", 0):
-        advice.append("检测到重复或近重复样本，建议在版本发布前保留去重清单。")
+        advice.append("Duplicate or near-duplicate records were found; keep the issue list with the release.")
     if scores and sum(1 for score in scores if score < threshold) / len(scores) > 0.25:
-        advice.append("低于质量阈值的样本比例较高，建议进入人工复核或自动修正规则迭代。")
+        advice.append("Many records fall below the score threshold; route them to review or rule updates.")
     if not advice:
-        advice.append("当前数据质量较稳定，可进入下游模型验证和漂移监测阶段。")
+        advice.append("The release looks stable enough for baseline validation and drift monitoring.")
     return advice
 
 
@@ -177,4 +177,3 @@ def grade(score: float) -> str:
 
 def clamp(value: float) -> float:
     return max(0.0, min(1.0, float(value)))
-

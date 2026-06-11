@@ -6,6 +6,7 @@ from typing import Any
 from .cleaning import clean_records
 from .drift import detect_drift
 from .io import ensure_dir, read_table, write_json, write_table
+from .manifest import build_manifest
 from .quality import score_records
 from .report import write_data_card, write_drift_markdown, write_markdown_report
 from .schema import load_config
@@ -50,10 +51,12 @@ def run_pipeline(
         paths["drift_report_json"] = str(write_json(output / "drift_report.json", drift_report))
         paths["drift_report_md"] = str(write_drift_markdown(output / "drift_report.md", drift_report))
 
+    manifest = build_manifest(paths, config, input_path, reference_path)
+    paths["manifest"] = str(write_json(output / "manifest.json", manifest))
+
     return {
         "paths": paths,
         "quality_report": report,
         "validation_report": validation,
         "drift_report": drift_report,
     }
-

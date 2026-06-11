@@ -1,0 +1,81 @@
+{
+  "tool": "secdata-forge",
+  "dataset": "OpenSec-Flow-Demo",
+  "task": "intrusion-detection",
+  "input": "examples/flows/raw_open_security_flows.csv",
+  "reference": "examples/flows/reference_open_security_flows.csv",
+  "artifacts": [
+    {
+      "name": "cleaned",
+      "path": "examples/demo_output/cleaned.csv",
+      "bytes": 3395,
+      "sha256": "ed95681d963436141a6a20892745a1e4598dd46de1e890fbe20c4e8abc591167"
+    },
+    {
+      "name": "data_card",
+      "path": "examples/demo_output/DATA_CARD.md",
+      "bytes": 1010,
+      "sha256": "bbca5dd4e4fc7b73f0856f66f9722229bfcc45a0ab759204cadc5c7be6aaadae"
+    },
+    {
+      "name": "drift_report_json",
+      "path": "examples/demo_output/drift_report.json",
+      "bytes": 2312,
+      "sha256": "a96e51056cd93878e6a2cd33acd9f7321c75efdb34c87b45b5b0fc5e7330620e"
+    },
+    {
+      "name": "drift_report_md",
+      "path": "examples/demo_output/drift_report.md",
+      "bytes": 579,
+      "sha256": "e67d522a5ebbd5b30e6c5c8a8e7be2443fd74de8d3cf0c02481e9b4e1b21dad5"
+    },
+    {
+      "name": "high_quality",
+      "path": "examples/demo_output/high_quality.csv",
+      "bytes": 3754,
+      "sha256": "84c4362f1c9c2d3f674fc4b7e611ce6d87a44028e350bf2462ab7fd78f960331"
+    },
+    {
+      "name": "issues",
+      "path": "examples/demo_output/issues.csv",
+      "bytes": 101,
+      "sha256": "f4601a9d77d35e4f6515ef5ee41cffe58a6a29754e5b7af965310e2100b0a6b0"
+    },
+    {
+      "name": "profile",
+      "path": "examples/demo_output/profile.json",
+      "bytes": 923,
+      "sha256": "99203cf284c50895a6898c0e13d58be3f7c25796741b5d93ea6df3a69cbcbade"
+    },
+    {
+      "name": "quality_report_json",
+      "path": "examples/demo_output/quality_report.json",
+      "bytes": 783,
+      "sha256": "9d30bd8029d2d08748f1d88d481aa8ba8d57ae75b050989c349c02c166209b86"
+    },
+    {
+      "name": "quality_report_md",
+      "path": "examples/demo_output/quality_report.md",
+      "bytes": 897,
+      "sha256": "74d629a15363811330301d7957d8ce3bc849060545846e32840468275fa9dd22"
+    },
+    {
+      "name": "quality_scores",
+      "path": "examples/demo_output/quality_scores.csv",
+      "bytes": 3998,
+      "sha256": "7cf3c7ef67adbdc6d13dcbe080d7cda0cf3a01724a49d02a31f486f325065225"
+    },
+    {
+      "name": "standardized",
+      "path": "examples/demo_output/standardized.csv",
+      "bytes": 3411,
+      "sha256": "ecc92cd830e31296332d3e460d58f61c05312e865f669d74f46e01f1153aa5b5"
+    },
+    {
+      "name": "validation_report",
+      "path": "examples/demo_output/validation_report.json",
+      "bytes": 811,
+      "sha256": "9d5d181fbae0340ed2ce3149d3c6d506a1e6cfdf4d3bc137ee35e4934806f7b1"
+    }
+  ]
+}

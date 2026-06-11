@@ -29,8 +29,8 @@
 
 ## Recommendations
 
-- 存在关键字段缺失样本，建议完善来源登记和字段映射规则。
-- 检测到重复或近重复样本，建议在版本发布前保留去重清单。
+- Some required fields are missing; review source registration and field mapping rules.
+- Duplicate or near-duplicate records were found; keep the issue list with the release.
 
 ## Downstream Baseline Validation
 

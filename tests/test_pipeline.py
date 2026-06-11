@@ -33,9 +33,12 @@ class PipelineTest(unittest.TestCase):
         paths = result["paths"]
         self.assertTrue(Path(paths["quality_report_json"]).exists())
         self.assertTrue(Path(paths["data_card"]).exists())
+        self.assertTrue(Path(paths["manifest"]).exists())
         report = json.loads(Path(paths["quality_report_json"]).read_text(encoding="utf-8"))
+        manifest = json.loads(Path(paths["manifest"]).read_text(encoding="utf-8"))
         self.assertGreater(report["overall_quality_score"], 0.7)
         self.assertGreaterEqual(report["issue_counts"].get("exact_duplicate", 0), 1)
+        self.assertGreater(len(manifest["artifacts"]), 5)
 
     def test_drift_flags_changed_current_distribution(self) -> None:
         config = load_config(CONFIG)
