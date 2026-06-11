@@ -1,11 +1,10 @@
 cff-version: 1.2.0
-title: CyberData Clean
-message: "If you use CyberData Clean in research or a grant proposal, please cite the repository."
+title: SecData Forge
+message: "If you use SecData Forge in research or engineering work, please cite the repository."
 type: software
 authors:
   - name: jinwenxin0001-gif
-repository-code: "https://github.com/jinwenxin0001-gif/data_clean"
+repository-code: "https://github.com/jinwenxin0001-gif/secdata-forge"
 license: MIT
 version: 0.1.0
 date-released: 2026-06-11
-

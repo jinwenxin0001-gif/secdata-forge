@@ -4,11 +4,11 @@ import json
 import unittest
 from pathlib import Path
 
-from cyberdata_clean.drift import detect_drift
-from cyberdata_clean.io import read_table
-from cyberdata_clean.pipeline import run_pipeline
-from cyberdata_clean.schema import load_config
-from cyberdata_clean.standardize import standardize_records
+from secdata_forge.drift import detect_drift
+from secdata_forge.io import read_table
+from secdata_forge.pipeline import run_pipeline
+from secdata_forge.schema import load_config
+from secdata_forge.standardize import standardize_records
 
 
 ROOT = Path(__file__).resolve().parents[1]

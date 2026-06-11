@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "cyberdata-clean"
+name = "secdata-forge"
 version = "0.1.0"
-description = "A lightweight lifecycle toolkit for high-quality cybersecurity datasets."
+description = "A small toolkit for auditable security dataset preparation."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
@@ -24,14 +24,13 @@ classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
   "Topic :: Security",
-  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Information Analysis",
   "Topic :: Software Development :: Libraries :: Python Modules"
 ]
 dependencies = []
 
 [project.scripts]
-cyberdata-clean = "cyberdata_clean.cli:main"
+secdata-forge = "secdata_forge.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

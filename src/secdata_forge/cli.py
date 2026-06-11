@@ -15,8 +15,8 @@ from .validation import validate_baseline
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="cyberdata-clean",
-        description="Lifecycle quality toolkit for open cybersecurity datasets.",
+        prog="secdata-forge",
+        description="Prepare, score, and compare security datasets.",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -77,4 +77,3 @@ def emit(payload: dict[str, Any], output: str | None) -> None:
     if output:
         write_json(Path(output), payload)
     print(json.dumps(payload, ensure_ascii=False, indent=2))
-
